@@ -1,22 +1,23 @@
 {
-    "name": "showcase",
-    "version": "0.0.1",
-    "description": "Test automation",
-    "main": "index.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/AwarePL/showcase.git"
-    },
-    "author": "lukasz@korchowiec.pl",
-    "license": "ISC",
-    "bugs": {
-      "url": "https://github.com/AwarePL/showcase/issues"
-    },
-    "homepage": "https://github.com/AwarePL/showcase#readme",
-    "dependencies": {
-
-    }
+  "name": "showcase",
+  "version": "0.0.1",
+  "description": "Test automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AwarePL/showcase.git"
+  },
+  "author": "lukasz@korchowiec.pl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AwarePL/showcase/issues"
+  },
+  "homepage": "https://github.com/AwarePL/showcase#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^5.0.0"
   }
+}

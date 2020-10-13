@@ -1,0 +1,9 @@
+{
+  "baseUrl": "https://wordpress.com/",
+  "testFiles":"**/*.spec.*",
+  "projectId": "9zrabn",
+  "retries": {
+    "runMode": 3,
+    "openMode": 1
+  }
+}
