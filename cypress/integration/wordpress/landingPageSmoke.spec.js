@@ -1,13 +1,12 @@
-const landingPageView = require('./pageObjects/landingPagePageObjects')
-const landingPage = require('./selectors/landingPageSelectors')
+const landingPageView = require('./pageObjects/landingPage')
+const landingPage = require('./selectors/landingPage')
 
 describe('Landing Page Smoke Test', () => {
   beforeEach(function () {
     cy.fixture('consts').then((consts) => {
       this.consts = consts
     })
-
-    cy.visit('')
+    cy.visit(Cypress.env('worldpress'))
   })
 
   it('Check first section content, expect section title, subtitle, start page button', function () {
@@ -42,9 +41,4 @@ describe('Landing Page Smoke Test', () => {
       this.consts.static.landingPage.sections.hero.footerText
     )
   })
-
-  // it('Check second section content, expect section title, subtitle, start page button', function () {
-  //   landingPageView.
-
-  // })
 })

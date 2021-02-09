@@ -1,5 +1,5 @@
 {
-  "baseUrl": "https://wordpress.com/",
+  "baseUrl": "http://localhost:8080",
   "testFiles":"**/*.spec.*",
   "projectId": "9zrabn",
   "retries": {

@@ -1,4 +1,4 @@
-const landingPage = require('../selectors/landingPageSelectors')
+const landingPage = require('../selectors/landingPage')
 
 function removeWhiteCharaters(element) {
   let t = element.text().replace(/\s+/g, ' ')

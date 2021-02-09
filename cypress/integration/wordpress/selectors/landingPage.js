@@ -12,4 +12,4 @@ module.exports = {
   sectionLinks: '.lpc-footer-links-2020',
   sectionFooter: '.lpc-div-tree.block-footer-icons',
   startPageButton: '.lpc-button'
-};
+}
