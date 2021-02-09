@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: cypress/included:5.0.0
+      - image: cypress/included:6.4.0
         environment:
           TERM: xterm
     working_directory: ~/app
