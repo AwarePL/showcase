@@ -22,3 +22,9 @@ jobs:
             - ~/.npm
             - ~/.cache
       - run: $npx cypress run --record --key b46eb365-48e2-4d31-969f-33f56f81df6e --parallel
+      - store_test_results:
+          path: integration-tests/test-results
+      - store_artifacts:
+          path: integration-tests/test-results
+      - store_artifacts:
+          path: integration-tests/test-artifacts
