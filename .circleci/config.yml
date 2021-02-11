@@ -21,4 +21,17 @@ jobs:
           paths:
             - ~/.npm
             - ~/.cache
-      - run: $npx cypress run --record --key b46eb365-48e2-4d31-969f-33f56f81df6e --parallel
+      - run: 
+        name: Running Showcase test automation
+        command:  $npx cypress run --reporter junit --record --key b46eb365-48e2-4d31-969f-33f56f81df6e --parallel
+        environment: 
+            MOCHA_FILE: cypress/results/junit/test-output.xml
+          when: cypress/always
+      - store_test_results:
+          path: cypress/results
+      - store_artifacts:
+          path: cypress/results
+      - store_artifacts:
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots
