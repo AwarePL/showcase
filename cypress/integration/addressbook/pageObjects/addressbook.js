@@ -70,7 +70,7 @@ export const createEntryWithData = (logic) => {
     .click()
   cy.wait('@getNewAdressForm')
   .then(() => {
-    if(logic === 'true'){
+    if(logic === true){
       fillNewAddressForm()
       cy.get(addressbook.createAddressBtn)
       .click()

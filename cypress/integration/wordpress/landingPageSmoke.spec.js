@@ -4,7 +4,7 @@ const landingPage = require('./selectors/landingPage')
 describe('Landing Page Smoke Test', () => {
   beforeEach(function () {
     cy.fixture('consts').then((consts) => {
-      this.consts = consts
+      this.landingPageData = consts.static.landingPage
     })
     cy.visit(Cypress.env('worldpress'))
   })
@@ -12,33 +12,33 @@ describe('Landing Page Smoke Test', () => {
   it('Check first section content, expect section title, subtitle, start page button', function () {
     landingPageView.checkSectionTitle(
       landingPage.sectionHero,
-      this.consts.static.landingPage.sections.hero.h1[0]
+      this.landingPageData.sections.hero.h1[0]
     )
     landingPageView.checkSectionTitle(
       landingPage.sectionHero,
-      this.consts.static.landingPage.sections.hero.h1[1]
+      this.landingPageData.sections.hero.h1[1]
     )
     landingPageView.checkSectionSubtitle(
       landingPage.sectionHero,
-      this.consts.static.landingPage.sections.hero.p
+      this.landingPageData.sections.hero.p
     )
     landingPageView.checkSectionStartWebsiteButton(
       landingPage.sectionHero,
-      this.consts.static.landingPage.sections.hero.startPageButton
+      this.landingPageData.sections.hero.startPageButton
     )
     landingPageView.checkSectionImages(
       landingPage.sectionHero,
-      this.consts.static.landingPage.sections.hero.mobileAlt,
-      this.consts.static.landingPage.sections.hero.tabletAlt,
-      this.consts.static.landingPage.sections.hero.desktopAlt
+      this.landingPageData.sections.hero.mobileAlt,
+      this.landingPageData.sections.hero.tabletAlt,
+      this.landingPageData.sections.hero.desktopAlt
     )
     landingPageView.checkH2(
       landingPage.sectionHero,
-      this.consts.static.landingPage.sections.hero.h2
+      this.landingPageData.sections.hero.h2
     )
     landingPageView.checkSectionFooter(
       landingPage.sectionHero,
-      this.consts.static.landingPage.sections.hero.footerText
+      this.landingPageData.sections.hero.footerText
     )
   })
 })
