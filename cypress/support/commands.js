@@ -1,0 +1,18 @@
+Cypress.Commands.add( "manualLoginAddressbook", () => {
+  cy.log('Perform manual login procedure with default test user.')
+  cy.clearCookies()
+  cy.clearLocalStorage()
+  cy.visit(Cypress.env('addressbook').host)
+  cy.setCookie(Cypress.env('addressbook').user.session.name, Cypress.env('addressbook').user.session.value)
+  cy.get('#sign-in')
+    .click()
+  cy.get('#session_email')
+    .type(Cypress.env('addressbook').user.login)
+  cy.get('#session_password')
+    .type(Cypress.env('addressbook').user.pass)
+  cy.get('input[data-test="submit"]')
+    .click()
+  cy.get('span[data-test="current-user"]')
+    .should('have.text', Cypress.env('addressbook').user.login)
+
+})

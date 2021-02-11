@@ -19,6 +19,9 @@
                     "h2": ""
                 }
             }
+        },
+        "addressbook": {
+          "tabText": ["Home", "Addresses", "Sign out"]
         }
     }
 }

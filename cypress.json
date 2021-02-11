@@ -4,5 +4,8 @@
   "retries": {
     "runMode": 3,
     "openMode": 1
-  }
+  },
+  "defaultCommandTimeout": 3000,
+  "viewportWidth": 1920,
+  "viewportHeight": 1080
 }
