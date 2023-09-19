@@ -131,3 +131,6 @@ dist
 
 # cypress
 screenshots/
+
+# env
+*.env
